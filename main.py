@@ -62,8 +62,6 @@ tweet_file = open(username + "_tweets_file.bin","wb")
 pickle.dump(tweets,tweet_file)
 tweet_file.close()
 
-import pickle
-
 tweet_file = open(username + "_tweets_file.bin","rb")
 tweets = pickle.load(tweet_file)
 tweet_file.close()
@@ -107,7 +105,6 @@ users = []
 
 print(follower_count)
 
-import pickle
 o_file = open(username+'_followers_file.csv', 'w')
 f = csv.writer(o_file, delimiter =',')
 f.writerow(["screenname", "name", "location"])
@@ -293,7 +290,6 @@ fig.show()
 
 """## d) Tweet Frequency ##"""
 
-import pickle
 
 tweet_file = open(username + "_tweets_file.bin",'rb')
 tweets = pickle.load(tweet_file)
@@ -336,7 +332,7 @@ plt.show()
 
 """## e) Engagement Score"""
 
-import pickle
+
 from datetime import datetime
 from dateutil.parser import parse
 
@@ -430,7 +426,6 @@ plt.show()
 Word Cloud
 """
 
-import pickle
 import json, random
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud, STOPWORDS
